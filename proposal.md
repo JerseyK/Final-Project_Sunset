@@ -1,48 +1,41 @@
+# Research Proposal: How the pandamic impacted the supply chain
+By Kyra Grodman, Jersey Krupp, and Qiyu Yang
+
+## Research Question
+We want to know supply chain network reformed and changed following the pandemic based on customer/supplier contracts from SEC filings. We hypothesize that digital/technology companies will increase as sellers.
+
+## Necessary Data
+1. This dataset should cover:
+  - SEC contracts from 2019 and 2022
+  - An observation is a firm-year
+  - The sample period is 2019 & 2022
+  - The sample conditions: 2019 & 2022, include all industries, maybe limit the amount of firms we look at??
+    - SP 500, start at technology intustries and see where the connections lead, other big supply chain companies (Walmart, Target, etc.)   
+  - We would like SEC Exhibit 10s,  maybe 10Ks
+2. We will need SEC Exhibit 10s & maybe 10Ks
+3. ?? based on results of our sample data?? - to see what other companies/firms to use
+4. raw inputs: the names of buyers and sellers in 2019 & 2022
+    1. Will store the E10 & maybe 10Ks in zip folders
+    2. Will store the scraped data in dataframes
+5. Similar to the midterm
+    1. Figure out which companies to look at
+    2. Use URLs/code from Midterm to obtain the buyers/seller names
+    3. Add these to a dataframe
+    4. Analyze the results
+    5. Convert results into a dashbaord
+
+---
 [Instructions for Overall Report](https://ledatascifi.github.io/ledatascifi-2023/content/assignments/project.html)
 
 [Instructions for Proposal](https://ledatascifi.github.io/ledatascifi-2023/content/assignments/project_prop_template.html)
 
 [Teams Google Sheet](https://docs.google.com/spreadsheets/d/1kRbuRKfKh9lCdoVBGLxSbDTIRBEfnV7Y8AcP-hZbmTw/edit#gid=1508330834)
 
-Ideas
-- dashboard
+Initial Idea
 - Identify customer/supplier contracts from SEC filings and build a dashboard visualization exploring how the supply chain network reformed and changed following the pandemic.
   - Collect SEC exhibit 10 files for 2019 and 2022. Restrict to customer/supplier contracts. Decide which firm is buyer and which is seller. Augment with 10-K based CustSupplier data. Compare/contrast the Exhibit10 data with 10-K based data.
-
-
-# Research Proposal: < Title >
-By X, Y, and Z
-
-## Research Question
-This section should cover:
-
-1. What do we want to know or what problems are we trying to solve? As in the midterm, you should list (1) the “bigger” question/debate/problem you’re interested in, and also (2) the specific research question(s) you’ll actually try to answer.
-
-- The research question will be smaller in scope than the big picture question. But the answer to your specific research question should shed light on the bigger question (although it likely won’t conclusively answer it).
-
-- The answer to your specific research question should shed light on the bigger question (although it likely won’t conclusively answer it).
-
-2. If your project is about relationships, what are the hypotheses you’re testing?
-
-3. If your project is about prediction, what is your metrics of success? (What are you maximizing?) Can you find a baseline from prior work to give you a ball park to aim for?
-
-## Necessary Data
-1. This section should cover:
-
-- What does the final dataset need to look like (mostly dictated by the question and the availability of data):
-
-- What is an observation, e.g. a firm, or a firm-year, etc.
-
-- What is the sample period?
-
-- What are the sample conditions? (Years, restrictions you anticipate (e.g. exclude or require some industries)
-
-- What variables are absolutely necessary and what would you like to have if possible?
-
-2. What data do we have and what data do we need?
-
-3. How will we collect more data?
-
-4. What are the raw inputs and how will you store them (the folder structure(s) for each input type)?
-
-5. Speculate at a high level (not specific code!) about how you’ll transform the raw data into the final form.
+- Links
+  - [EY](https://www.ey.com/en_us/supply-chain/how-covid-19-impacted-supply-chains-and-what-comes-next#:~:text=The%20pandemic%20also%20forced%20supply,the%20next%20crisis%20requires%20optimization).
+  - [WEF](https://www.weforum.org/agenda/2022/01/5-ways-the-covid-19-pandemic-has-changed-the-supply-chain/)
+  - [McKinsey](https://www.mckinsey.com/capabilities/operations/our-insights/how-covid-19-is-reshaping-supply-chains)
+  - [Sample E10](https://www.sec.gov/Archives/edgar/data/845091/000119312511222394/dex10.htm)
