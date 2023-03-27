@@ -1,5 +1,5 @@
-# Final-Project
----
+# Final-Project - Team: Sunset
+
 [Instructions for Overall Report](https://ledatascifi.github.io/ledatascifi-2023/content/assignments/project.html)
 
 [Instructions for Proposal](https://ledatascifi.github.io/ledatascifi-2023/content/assignments/project_prop_template.html)
@@ -14,3 +14,8 @@ Initial Idea
   - [WEF](https://www.weforum.org/agenda/2022/01/5-ways-the-covid-19-pandemic-has-changed-the-supply-chain/)
   - [McKinsey](https://www.mckinsey.com/capabilities/operations/our-insights/how-covid-19-is-reshaping-supply-chains)
   - [Sample E10](https://www.sec.gov/Archives/edgar/data/845091/000119312511222394/dex10.htm)
+
+Meeting Times:
+- M after 3pm (Zoom)
+- W after 1:45pm (in person/Zoom)
+- other days/times as needed
