@@ -1,4 +1,4 @@
-# Research Proposal: How the Pandamic Impacted the Supply Chain
+# Research Proposal: How the Pandemic Impacted the Supply Chain
 By Kyra Grodman, Jersey Krupp, and Qiyu Yang
 
 ## Research Question
