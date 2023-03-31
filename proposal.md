@@ -24,5 +24,5 @@ We want to explore how the supply chain network has reformed and changed followi
     4. Analyze the results
     5. Convert results into a dashbaord using the dashboard chapter in the textbook and the accompanying resource such as streamlit to show the outputs made in python
     
-**Sample Dashboard**
+## Sample Dashboard
 ![](Proposals/Initial_proposal_dashboard.excalidraw_screenshot.png)
