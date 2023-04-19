@@ -35,4 +35,4 @@ We will explore how the supply chain network has reformed and changed following 
     5. Convert results into a dashbaord using the dashboard chapter in the textbook and the accompanying resource [streamlit.io](https://streamlit.io) to show the outputs made in python
     
 ## Sample Dashboard (subject to change)
-![](Proposals/Initial_proposal_dashboard.excalidraw_screenshot.png)
+![](Initial_proposal_dashboard.excalidraw_screenshot.png)
