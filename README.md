@@ -236,9 +236,13 @@ Overall, despite the challenging business environment subsequent to the COVID-19
 
 
 ## About the Team <a name="team"></a>
-[Jersey Krupp](https://www.linkedin.com/in/jersey-ann-krupp/): MS in Financial Engineering
-[Qiyu Yang](https://www.linkedin.com/in/qiyu-yang-672577222/): MS in Financial Engineering
 [Kyra Grodman](https://www.linkedin.com/in/kyragrodman/): BS in Finance and Business Infomation Systems
+<br><br><br>
+[Jersey Krupp](https://www.linkedin.com/in/jersey-ann-krupp/): MS in Financial Engineering
+<br><br><br>
+[Qiyu Yang](https://www.linkedin.com/in/qiyu-yang-672577222/): MS in Financial Engineering
+
+
 
 
 
