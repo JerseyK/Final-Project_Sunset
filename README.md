@@ -205,17 +205,17 @@ filtered.to_csv("outputs/compustat_final.csv", index = False)
 For the full analysis please check out our dashboard [here](https://jerseyk-final-project-sunset-website-welcome-eoomf2.streamlit.app/).
 
 
-## Conclusion: <a name="conclu"></a>
+## Conclusion <a name="conclu"></a>
 According to the latest financial reports, we dropped companies in real estate, utilities and energy sectors because of lacking reported data in 2022. The final results show that during the COVID-19 pandemic, only a few companies have data available for both 2019 and 2022 years. 
 
-Looking at our results, we see that except for the IT industry and healthcare industry, most industries experienced a decrease in sales. Take these two companies for instance. **NVIDIA Corporation** , an IT company, had a significant increase in the demand for computer-related products, including GPUs, due to the shift towards remote work, distance learning, and increased usage of video streaming services. This company has been successful in expanding its reach into new markets, such as data centers, autonomous vehicles and AI. **CATALENT INC**, a healthcare company, provided advanced delivery technologies, development, and manufacturing services for drugs, biologics, and consumer health products. They especially collaborated with several pharmaceutical companies to support the development and production of vaccines and therapies.
+Looking at our results, we see that except for the IT industry and healthcare industry, most industries experienced a decrease in sales. Take these two companies for instance. **NVIDIA Corporation**, an IT company, had a significant increase in the demand for computer-related products, including GPUs, due to the shift towards remote work, distance learning, and increased usage of video streaming services. This company has been successful in expanding its reach into new markets, such as data centers, autonomous vehicles and AI. **CATALENT INC**, a healthcare company, provided advanced delivery technologies, development, and manufacturing services for drugs, biologics, and consumer health products. They especially collaborated with several pharmaceutical companies to support the development and production of vaccines and therapies.
 
 Overall, despite the challenging business environment subsequent to the COVID-19 pandemic, the IT industry was able to maintain its performance and even improve its sales. This underscores the resilience of the industry and the importance of digitalization in the current business landscape. We can see from our visualization that the IT industry increased in sales by about half a million dollars from 2019 to 2022. These findings support the need for companies to adapt to the changing business landscape by embracing digitalization and other innovative strategies to remain competitive in today's economy.
-.
 
 
 
-## About the Team: <a name="team"></a>
+
+## About the Team <a name="team"></a>
 Jersey Krupp :: Qiyu Yang :: Kyra Grodman
 
 
