@@ -202,6 +202,7 @@ filtered.to_csv("outputs/compustat_final.csv", index = False)
 ```
 
 ## Analysis <a name="analysis"></a>
+*For the full analysis please check out our dashboard [here](https://jerseyk-final-project-sunset-website-welcome-eoomf2.streamlit.app/).*
 
 ## Conclusion: <a name="conclu"></a>
 Only a few companies have data available for both 2019 and 2022 years. The results show that, except for the IT industry, most industries experienced a decrease in sales. During the COVID-19 pandemic, NVIDIA Corporation had a significant increase in the demand for computer-related products, including GPUs, due to the shift towards remote work, distance learning, and increased usage of video streaming services. This company has been successful in expanding its reach into new markets, such as data centers, autonomous vehicles and AI. 
@@ -213,6 +214,5 @@ Despite the challenging business environment, the IT industry was able to mainta
 ## About the Team: <a name="team"></a>
 Jersey Krupp :: Qiyu Yang :: Kyra Grodman
 
-*The final dashboard can be found [here](https://jerseyk-final-project-sunset-website-welcome-eoomf2.streamlit.app/).*
 
 
