@@ -1,5 +1,24 @@
-## Methodology
-### Data Collection
+# The Impact of COVID-19 on Supply Chain from a Financial Perspective
+Team Sunset - 
+
+## Table of Contents
+1. [Introduction](#introduction)
+2. [Methodology](#method)
+    1. [Data Collection](#datacol)
+    1. [Data Cleaning](#dataclean)
+    1. [Merging Compustat & SP500 Datasets](#merg)
+    1. [Identifying the Unique `gvkey` to Obtain Accounting Data](#unique)
+    1. [Merging Compustat & SP500 List](#list)
+    1. [Final Datasets](#final)
+4. [Conclusion](#conclu)
+5. [About the Team](#team)
+
+
+## Introduction <a name="introduction"></a>
+
+
+## Methodology <a name="method"></a>
+### Data Collection <a name="datacol"></a>
 To create and run our file we used various imports such as `pandas`, `numpy`, `os`, and `seaborn`. In addition to those general python imports, we also used `insufficient_but_starting_eda` from `eda.py` which is located in the [community codebook](https://github.com/LeDataSciFi/ledatascifi-2023/tree/main/community_codebook). We used three different datasets to create one final dataset to be displayed visually through analysis on our dashboard.
 
 [S&P 500](https://github.com/JerseyK/Final-Project_Sunset/blob/d3a36fde0bb19d897fb15effcb85ffb0f04ec78b/inputs/sp500_2022.csv): We scraped data from Wikipedia to create this dataset to filter for SP500 companies.
@@ -16,7 +35,7 @@ acct_raw = pd.read_csv("inputs/acct_data.csv"
 ```
 
 
-### Data Cleaning
+### Data Cleaning <a name="dataclean"></a>
 
 **S&P 500**: There were 503 firms in 2022.
 
@@ -86,7 +105,7 @@ With this new dataset we then performed [EDA](https://github.com/JerseyK/Final-P
 Based off of our EDA we decided to use `ni` as the variable to represent net income as it had the least missing values. We used the same logic to decide to use `capx` over `capxv`. In turn we were then able to drop the other variables that represented net income `acominc`, `oibdp`, and `ib`, as well as `capxv`. After dropping those variables we had a dataset ready that we could add to by creating variables to show the growth (return) between 2019 and 2022 firms for each accounting variables before merging with the SP500 and Compustat dataset.
 
 
-### Merging Compustat & SP500 Datasets
+### Merging Compustat & SP500 Datasets <a name="merg"></a>
 We merged `comp` with `sp500` to create `merged` which merged the two on `CIK`. This final dataset gave us 385 unique firms.
 ```
 comp3 = comp3.rename(columns = {'cik': 'CIK'})
@@ -123,14 +142,14 @@ Lastly, we then filtered out any firms that didn't have filings in both 2019 and
 filtered = filtered_out_df.groupby('gvkey').filter(lambda x: x['fyear'].max() == 2022)
 ```
 
-### Identifying the Unique `gvkey` to Obtain Accounting Data
+### Identifying the Unique `gvkey` to Obtain Accounting Data <a name="unique"></a>
 With the `filtered_out_df` dataset we were able to extract the list of unique `gvkey` to a .csv file to obtain the accounting from Dr. Bowen.
 ```
 listkeys = pd.DataFrame(filtered_out_df['gvkey'].unique())
 listkeys.to_csv('inputs/listkeys.csv', index=False)
 ```
 
-### Merging Accounting & SP500 Datasets
+### Merging Accounting & SP500 List <a name="list"></a>
 
 With the cleaned accounting data we were able to merge `listkeys` and `acct_raw` on `gvkey`. There we had 354 unique firms.
 ```
@@ -160,7 +179,7 @@ for index, row in acct_df.iloc[1:].iterrows():
 ```
 
 
-### Final Datasets
+### Final Datasets <a name="final"></a>
 For our final dataset we merged elements from the Compustat/SP500 dataset with the accounting dataset. We took `filtered` and kept our desired columns of `gvkey`, `fyear`, `conm`, `Symbol`, `CIK`. The next thing we did was drop duplicates so that we could be able to match firms in the accounting dataset. The final merge left us with 89 unique firms. (The same amount we found earlier in `filtered`). 
 ```
 cleaned_comp = filtered[['gvkey', 'fyear', 'conm', 'Symbol', 'CIK']]
@@ -178,10 +197,10 @@ accounting.to_csv("outputs/accounting_final.csv", index = False)
 filtered.to_csv("outputs/compustat_final.csv", index = False)
 ```
 
-## Conclusion:
+## Conclusion: <a name="conclu"></a>
 
 
-## About the Team:
+## About the Team: <a name="team"></a>
 Add Names :: Name :: Name
 
 *The snippets of code are from our [Analysis Github Repository](https://github.com/JerseyK/Final-Project_Sunset).*
