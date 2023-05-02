@@ -816,7 +816,6 @@ gvkey,cid,cnms,ctype,gareac,gareat,salecs,sid,stype,srcdate,conm,tic,cusip,CIK,s
 20904,15,International,GEOREG,OTHER,REG,270.6,11,BUSSEG,2022-09-30,HOLOGIC INC,HOLX,436440101,859737.0,3844,HOLX,Hologic,Health Care,Health Care Equipment,"Marlborough, Massachusetts",2016-03-30,1985,2022-09-30,2022
 24975,1,INTEL CORP,COMPANY,,,430.169,0,,2019-10-31,SYNOPSYS INC,SNPS,871607107,883241.0,7372,SNPS,Synopsys,Information Technology,Application Software,"Mountain View, California",2017-03-16,1986,2019-10-31,2019
 24975,1,INTEL CORP,COMPANY,,,594.54,0,,2022-10-31,SYNOPSYS INC,SNPS,871607107,883241.0,7372,SNPS,Synopsys,Information Technology,Application Software,"Mountain View, California",2017-03-16,1986,2022-10-31,2022
-25313,26,3 Customers,COMPANY,,,163.109,9,BUSSEG,2022-03-31,STERIS PLC,STE,G8473T100,1757898.0,3841,STE,Steris,Health Care,Health Care Equipment,"Dublin, Ireland",2019-12-23,1985,2022-03-31,2022
 25434,38,Other,MARKET,,,17.5,9,OPSEG,2019-09-30,STARBUCKS CORP,SBUX,855244109,829224.0,5812,SBUX,Starbucks,Consumer Discretionary,Restaurants,"Seattle, Washington",2000-06-07,1971,2019-09-30,2019
 25434,37,Licensed stores,MARKET,,,917.0,9,OPSEG,2019-09-30,STARBUCKS CORP,SBUX,855244109,829224.0,5812,SBUX,Starbucks,Consumer Discretionary,Restaurants,"Seattle, Washington",2000-06-07,1971,2019-09-30,2019
 25434,36,Company-operated stores,MARKET,,,5256.2,9,OPSEG,2019-09-30,STARBUCKS CORP,SBUX,855244109,829224.0,5812,SBUX,Starbucks,Consumer Discretionary,Restaurants,"Seattle, Washington",2000-06-07,1971,2019-09-30,2019
