@@ -1,14 +1,3 @@
-# Page config
-st.set_page_config(
-    page_title="Report",
-    page_icon = "📊",
-    layout = "wide"
-)
-
-#############################################
-# Report
-#############################################
-'''
 ## Methodology
 ### Data Collection
 To create and run our file we used various imports such as `pandas`, `numpy`, `os`, and `seaborn`. In addition to those general python imports, we also used `insufficient_but_starting_eda` from `eda.py` which is located in the [community codebook](https://github.com/LeDataSciFi/ledatascifi-2023/tree/main/community_codebook). We used three different datasets to create one final dataset to be displayed visually through analysis on our dashboard.
@@ -20,9 +9,11 @@ To create and run our file we used various imports such as `pandas`, `numpy`, `o
 [Accounting 2018-2022](https://github.com/JerseyK/Final-Project_Sunset/blob/d3a36fde0bb19d897fb15effcb85ffb0f04ec78b/inputs/acct_data.csv): This dataset was also provided by Dr. Bowen and is comprised of accounting variables we requested.
 
 
-```comp = pd.read_csv('inputs/cust_supply_2019_2022.csv')
+```
+comp = pd.read_csv('inputs/cust_supply_2019_2022.csv')
 sp500 = pd.read_csv('inputs/sp500_2022.csv')
-acct_raw = pd.read_csv("inputs/acct_data.csv"```
+acct_raw = pd.read_csv("inputs/acct_data.csv"
+```
 
 
 
@@ -110,7 +101,8 @@ merged['date'] = pd.to_datetime(merged['srcdate'])
 dates = merged.sort_values(by='srcdate')
 ```
 
-```start_date = '2020-01-01'
+```
+start_date = '2020-01-01'
 end_date = '2021-12-31'
 filtered_df = merged.query('@start_date <= date <= @end_date')
 
