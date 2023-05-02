@@ -16,10 +16,11 @@
 
 
 ## Introduction <a name="introduction"></a>
-For ourt final project we decided to explore how the supply chain network has reformed and changed following the pandemic based on customer/supplier contracts from the Compustat Customer Supplier dataset. The main goal of this project was to compare the number of contracts as well as compare the growth of technology companies within the supply chain network. 
+For our final project we decided to explore how the supply chain network has reformed and changed following the pandemic based on customer/supplier contracts from the Compustat Customer Supplier dataset. The main goal of this project was to compare the number of contracts as well as compare the growth of technology companies within the supply chain network. 
 
 The question we proposed at the start of the project was how has the supply chain industry changed following the pandemic? One of our initial hypotheis was that the amount of technology based companies would increase in 2022. The other hypothesis we had was that the amount of contracts involving healthcare/pharmaceutical companies would also increase. 
 
+The COVID-19 pandemic has had a significant impact on the global economy and disrupted supply chains across various industries. As a result, we conducted an analysis of the financial factors affecting several seller companies. We focused on companies that are in the S&P 500 as of 2022 and used data from financial reports in 2019 and 2022 to gain insights into how the pandemic has affected their financial performance.
 
 ## Methodology <a name="method"></a>
 ### Data Collection <a name="datacol"></a>
@@ -89,21 +90,21 @@ comp3 = comp2.dropna(subset=['salecs'])
 
 
 **Accounting 2018-2022**: We provided Dr. Bowen with a list of unique `gvkeys` along with a request for data for the following accounting variables:
-- fyear (fiscal year)
-- sale (net sales)
-- rect (receivables/total)
-- invt (inventories)
-- ap (accounts payable - trade)
-- ib (income before extraordinary items)
-- ni (net income (loss))
-- obidp (operating income before depreciation)
-- at (total assets)
-- capx (capex, dollar amount)
-- capxv (capex ratio for current fiscal year)
-- cogs (cost of goods sold)
-- gp (gross profit)
-- epsfx (eps basic)
-- acominc (net income)
+- **fyear:** fiscal year
+- **sale:** net sales
+- **rect:** receivables/total
+- **invt:** inventories
+- **ap:** accounts payable - trade
+- **ib:** income before extraordinary items
+- **ni:** net income (loss)
+- **obidp:** operating income before depreciation
+- **at:** total assets
+- **capx:** capex, dollar amount
+- **capxv:** capex ratio for current fiscal year
+- **cogs:** cost of goods sold
+- **gp:** gross profit
+- **epsfx:** eps basic
+- **acominc:** net income
     
 With this new dataset we then performed [EDA](https://github.com/JerseyK/Final-Project_Sunset/blob/d3a36fde0bb19d897fb15effcb85ffb0f04ec78b/data_eda.ipynb). After running that we found that:
 - There are 26905 observations
@@ -225,9 +226,9 @@ For the full analysis please check out our dashboard [here](https://jerseyk-fina
 
 
 ## Conclusion <a name="conclu"></a>
-According to the latest financial reports, we dropped companies in real estate, utilities and energy sectors because of lacking reported data in 2022. The final results show that during the COVID-19 pandemic, only a few companies have data available for both 2019 and 2022 years. 
+Our final results include 88 companies. We dropped companies in real estate, utilities and energy sectors because of the lack of data from the 2019 and 2022 financial reports. This could be a possible limitation for our analysis, however, we feel that the sample size is still strong enough to be used as a representation of how the supply chain was impacted by the COVID-19 pandemic.
 
-Looking at our results, we see that except for the IT industry and healthcare industry, most industries experienced a decrease in sales. Take these two companies for instance. **NVIDIA Corporation**, an IT company, had a significant increase in the demand for computer-related products, including GPUs, due to the shift towards remote work, distance learning, and increased usage of video streaming services. This company has been successful in expanding its reach into new markets, such as data centers, autonomous vehicles and AI. **CATALENT INC**, a healthcare company, provided advanced delivery technologies, development, and manufacturing services for drugs, biologics, and consumer health products. They especially collaborated with several pharmaceutical companies to support the development and production of vaccines and therapies.
+Looking at our results, we see that except for the IT industry and healthcare industry, most industries experienced a decrease in sales. Take these two companies for instance. **NVIDIA Corporation**, an IT company, had a significant increase in the demand for computer-related products, including GPUs, due to the shift towards remote work, distance learning, and increased usage of video streaming services. They been successful in expanding its reach into new markets, such as data centers, autonomous vehicles and AI. NVIDIA saw a 147.06% increase in net sales from 2019 to 2022. **CATALENT INC**, a healthcare company, provided advanced delivery technologies, development, and manufacturing services for drugs, biologics, and consumer health products. They especially collaborated with several pharmaceutical companies to support the development and production of vaccines and therapies. From 2019 to 2002, CATALENT saw a 91.74% increase in net sales.
 
 Overall, despite the challenging business environment subsequent to the COVID-19 pandemic, the IT industry was able to maintain its performance and even improve its sales. This underscores the resilience of the industry and the importance of digitalization in the current business landscape. We can see from our visualization that the IT industry increased in sales by about half a million dollars from 2019 to 2022. These findings support the need for companies to adapt to the changing business landscape by embracing digitalization and other innovative strategies to remain competitive in today's economy.
 
@@ -235,7 +236,9 @@ Overall, despite the challenging business environment subsequent to the COVID-19
 
 
 ## About the Team <a name="team"></a>
-Jersey Krupp :: Qiyu Yang :: Kyra Grodman
+[Jersey Krupp](https://www.linkedin.com/in/jersey-ann-krupp/): MS in Financial Engineering
+[Qiyu Yang](https://www.linkedin.com/in/qiyu-yang-672577222/): MS in Financial Engineering
+[Kyra Grodman](https://www.linkedin.com/in/kyragrodman/): BS in Finance and Business Infomation Systems
 
 
 
