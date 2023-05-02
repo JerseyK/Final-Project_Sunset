@@ -1,5 +1,5 @@
 # The Impact of COVID-19 on Supply Chain from a Financial Perspective
-Team Sunset - 
+Team Sunset - Jersey Krupp, Qiyu Yang, Kyra Grodman
 
 ## Table of Contents
 1. [Introduction](#introduction)
@@ -208,7 +208,7 @@ Despite the challenging business environment, the IT industry was able to mainta
 
 
 ## About the Team: <a name="team"></a>
-Add Names :: Name :: Name
+Jersey Krupp :: Qiyu Yang :: Kyra Grodman
 
 *The final dashboard can be found [here](https://jerseyk-final-project-sunset-website-welcome-eoomf2.streamlit.app/).*
 
