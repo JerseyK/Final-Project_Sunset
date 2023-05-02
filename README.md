@@ -16,7 +16,6 @@ acct_raw = pd.read_csv("inputs/acct_data.csv"
 ```
 
 
-
 ### Data Cleaning
 
 **S&P 500**: There were 503 firms in 2022.
@@ -44,8 +43,9 @@ Based off of our EDA, we first dropped all of the observations where the custome
 comp2 = comp
 comp2 = comp2[comp2['cnms'] != 'Not Reported']
 comp3 = comp2.dropna(subset=['salecs'])
-
 ```
+
+
 **Accounting 2018-2022**: We provided Dr. Bowen with a list of unique `gvkeys` along with a request for data for the following accounting variables:
 - fyear (fiscal year)
 - sale (net sales)
@@ -89,17 +89,17 @@ Based off of our EDA we decided to use `ni` as the variable to represent net inc
 ### Merging Compustat & SP500 Datasets
 We merged `comp` with `sp500` to create `merged` which merged the two on `CIK`. This final dataset gave us 385 unique firms.
 ```
-
 comp3 = comp3.rename(columns = {'cik': 'CIK'})
 merged = comp3.merge(sp500, on='CIK', how = 'inner')
 ```
 
+
 Next, we dropped the filings that were not in 2019 or 2022. We used the indices of the filtered dates (01/01/2020 to 12/31/2021) to be be dropped. This left us with 355 unique firms.
 ```
-
 merged['date'] = pd.to_datetime(merged['srcdate'])
 dates = merged.sort_values(by='srcdate')
 ```
+
 
 ```
 start_date = '2020-01-01'
@@ -111,13 +111,15 @@ filtered_indices = filtered_df.index
 filtered_out_df = merged.drop(filtered_indices)
 ```
 
+
 We created a column `fyear` to simplify later merging. 
 ```
 filtered_out_df['fyear'] = pd.to_datetime(filtered_out_df['srcdate']).dt.year
 ```
+
+
 Lastly, we then filtered out any firms that didn't have filings in both 2019 and 2022. This left us with 89 unique firms. This is a number we would be able to use to check on our final merge.
 ```
-
 filtered = filtered_out_df.groupby('gvkey').filter(lambda x: x['fyear'].max() == 2022)
 ```
 
@@ -132,18 +134,19 @@ listkeys.to_csv('inputs/listkeys.csv', index=False)
 
 With the cleaned accounting data we were able to merge `listkeys` and `acct_raw` on `gvkey`. There we had 354 unique firms.
 ```
-
 listkeys2 = listkeys.rename(columns={0: 'gvkey'})
 
 merged_acct_raw_keys = pd.merge(listkeys2,acct_raw,how = 'inner', on='gvkey')
 ```
 
+
 The next step was to take that new merged DataFrame and filter it to `fyear` to be 2019 or 2022. We then dropped the variables we deemed unnecessary during data cleaning to make our dataset concise.
 ```
-
 acct_df = merged_acct_raw_keys.query('fyear == 2019 or fyear == 2022')
 acct_df = acct_df[['gvkey', 'fyear', 'ap', 'at', 'capx', 'cogs', 'epsfx', 'gp', 'invt', 'ni', 'rect', 'sale']]
 ```
+
+
 Before merging with the `filtered` dataset, we created variables for each accounting variable (`ap`, `capx`, `ni`, etc) to show the growth between 2019 and 2022. 
 ```
 prev_row = acct_df.iloc[0]
@@ -155,6 +158,8 @@ for index, row in acct_df.iloc[1:].iterrows():
         calc_row.rename({k: f"calc_{k}" for k in calc_row.index}, inplace=True)
         acct_df.loc[index, calc_row.index] = calc_row
 ```
+
+
 ### Final Datasets
 For our final dataset we merged elements from the Compustat/SP500 dataset with the accounting dataset. We took `filtered` and kept our desired columns of `gvkey`, `fyear`, `conm`, `Symbol`, `CIK`. The next thing we did was drop duplicates so that we could be able to match firms in the accounting dataset. The final merge left us with 89 unique firms. (The same amount we found earlier in `filtered`). 
 ```
