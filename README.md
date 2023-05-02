@@ -75,7 +75,7 @@ These variables describe the customer of the firm and say something about the re
 - **stype:** segment type
 
 
-We also found that even though more than 50% of geographic  area code (`gareac`) and geographic area type (`gareat`) are missing, these values wouldn't be needed for our analysis and were dropped. We also were not concerned about segment type (`stype`) because we used `GICS Sector` to describe the seller.  Another variable, sales `salecs` had 12.4% missing observations. We saw that when `salecs` were NaN, the buyer was also "not reported"; therefore we dropped the missing observations.
+We found that even though more than 50% of geographic  area code (`gareac`) and geographic area type (`gareat`) are missing, these values wouldn't be needed for our analysis and were dropped. We also were not concerned about segment type (`stype`) because we used `GICS Sector` to describe the seller.  Another variable, sales `salecs` had 12.4% missing observations. We saw that when `salecs` were NaN, the buyer was also "not reported"; therefore we dropped the missing observations.
 
 Based off of our EDA, we first dropped all of the observations where the customer name was not reported, this also corresponded to sellers not in the SP500. Next, we dropped any observations where there were no sales reported. 
 
