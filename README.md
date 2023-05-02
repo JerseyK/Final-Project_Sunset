@@ -15,6 +15,9 @@ Team Sunset -
 
 
 ## Introduction <a name="introduction"></a>
+For ourt final project we decided to explore how the supply chain network has reformed and changed following the pandemic based on customer/supplier contracts from the Compustat Customer Supplier dataset. The main goal of this project was to compare the number of contracts as well as compare the growth of technology companies within the supply chain network. 
+
+The question we proposed at the start of the project was how has the supply chain industry changed following the pandemic? One of our initial hypotheis was that the amount of technology based companies would increase in 2022. The other hypothesis we had was that the amount of contracts involving healthcare/pharmaceutical companies would also increase. 
 
 
 ## Methodology <a name="method"></a>
@@ -137,7 +140,7 @@ filtered_out_df['fyear'] = pd.to_datetime(filtered_out_df['srcdate']).dt.year
 ```
 
 
-Lastly, we then filtered out any firms that didn't have filings in both 2019 and 2022. This left us with 89 unique firms. This is a number we would be able to use to check on our final merge.
+Lastly, we then filtered out any firms that didn't have filings in both 2019 and 2022. We also noticed that there was no 2019 Compustat data for `gvkey = 25313`, so we dropped this firm. This left us with 88 unique firms. This is a number we would be able to use to check on our final merge.
 ```
 filtered = filtered_out_df.groupby('gvkey').filter(lambda x: x['fyear'].max() == 2022)
 ```
@@ -180,7 +183,7 @@ for index, row in acct_df.iloc[1:].iterrows():
 
 
 ### Final Datasets <a name="final"></a>
-For our final dataset we merged elements from the Compustat/SP500 dataset with the accounting dataset. We took `filtered` and kept our desired columns of `gvkey`, `fyear`, `conm`, `Symbol`, `CIK`. The next thing we did was drop duplicates so that we could be able to match firms in the accounting dataset. The final merge left us with 89 unique firms. (The same amount we found earlier in `filtered`). 
+For our final dataset we merged elements from the Compustat/SP500 dataset with the accounting dataset. We took `filtered` and kept our desired columns of `gvkey`, `fyear`, `conm`, `Symbol`, `CIK`. The next thing we did was drop duplicates so that we could be able to match firms in the accounting dataset. The final merge left us with 88 unique firms. (The same amount we found earlier in `filtered`). 
 ```
 cleaned_comp = filtered[['gvkey', 'fyear', 'conm', 'Symbol', 'CIK']]
 cleaned_comp = cleaned_comp.drop_duplicates()
@@ -198,11 +201,15 @@ filtered.to_csv("outputs/compustat_final.csv", index = False)
 ```
 
 ## Conclusion: <a name="conclu"></a>
+Only a few companies have data available for both 2019 and 2022 years. The results show that, except for the IT industry, most industries experienced a decrease in sales. During the COVID-19 pandemic, NVIDIA Corporation had a significant increase in the demand for computer-related products, including GPUs, due to the shift towards remote work, distance learning, and increased usage of video streaming services. This company has been successful in expanding its reach into new markets, such as data centers, autonomous vehicles and AI. 
+
+Despite the challenging business environment, the IT industry was able to maintain its performance and even improve its sales. This underscores the resilience of the industry and the importance of digitalization in the current business landscape. These findings not only support our intial hypothesis but also the need for companies to adapt to the changing business landscape by embracing digitalization and other innovative strategies to remain competitive in today's economy.
+
 
 
 ## About the Team: <a name="team"></a>
 Add Names :: Name :: Name
 
-*The snippets of code are from our [Analysis Github Repository](https://github.com/JerseyK/Final-Project_Sunset).*
+*The final dashboard can be found [here](https://jerseyk-final-project-sunset-website-welcome-eoomf2.streamlit.app/).*
 
 
