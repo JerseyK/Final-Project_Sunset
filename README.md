@@ -10,6 +10,7 @@ Team Sunset - Jersey Krupp, Qiyu Yang, Kyra Grodman
     1. [Identifying the Unique `gvkey` to Obtain Accounting Data](#unique)
     1. [Merging Compustat & SP500 List](#list)
     1. [Final Datasets](#final)
+3. [Analysis](#analysis)
 4. [Conclusion](#conclu)
 5. [About the Team](#team)
 
@@ -199,6 +200,8 @@ accounting.to_csv("outputs/accounting_final.csv", index = False)
 # compustat data
 filtered.to_csv("outputs/compustat_final.csv", index = False)
 ```
+
+## Analysis <a name="analysis"></a>
 
 ## Conclusion: <a name="conclu"></a>
 Only a few companies have data available for both 2019 and 2022 years. The results show that, except for the IT industry, most industries experienced a decrease in sales. During the COVID-19 pandemic, NVIDIA Corporation had a significant increase in the demand for computer-related products, including GPUs, due to the shift towards remote work, distance learning, and increased usage of video streaming services. This company has been successful in expanding its reach into new markets, such as data centers, autonomous vehicles and AI. 
