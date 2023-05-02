@@ -54,6 +54,25 @@ acct_raw = pd.read_csv("inputs/acct_data.csv"
     - stype (14.0%)
     - salecs (12.4%)
     - cik (0.6%)
+    
+These variables describe the seller firm a row of data:   
+- **gvkey:** a unique identifier for the company (Global Company Key)
+- **sic:** Standard Industrial Classification code, a numerical code used to classify industries
+- **cusip:** CUSIP number, a unique identifier for a security
+- **cik:** SEC Central Index Key, a unique identifier for a company
+- **tic:** stock ticker symbol
+- **conm:** company name
+- **srcdate:** source date
+
+These variables describe the customer of the firm and say something about the relationship type:
+- **cid:** a unique identifier for the customer
+- **cnms:** customer name
+- **ctype:** customer type
+- **gareac:** geographic area code
+- **gareat:** geographic area type
+- **salecs:** sales in current period (in millions)
+- **sid:** segment identifier
+- **stype:** segment type
 
 
 We also found that even though more than 50% of geographic  area code (`gareac`) and geographic area type (`gareat`) are missing, these values wouldn't be needed for our analysis and were dropped. We also were not concerned about segment type (`stype`) because we used `GICS Sector` to describe the seller.  Another variable, sales `salecs` had 12.4% missing observations. We saw that when `salecs` were NaN, the buyer was also "not reported"; therefore we dropped the missing observations.
@@ -83,7 +102,7 @@ comp3 = comp2.dropna(subset=['salecs'])
 - capxv (capex ratio for current fiscal year)
 - cogs (cost of goods sold)
 - gp (gross profit)
-- epsfx (eps basic (takes into account the actual number of shares outstanding, and does not include any potentially dilutive securities))
+- epsfx (eps basic)
 - acominc (net income)
     
 With this new dataset we then performed [EDA](https://github.com/JerseyK/Final-Project_Sunset/blob/d3a36fde0bb19d897fb15effcb85ffb0f04ec78b/data_eda.ipynb). After running that we found that:
