@@ -223,7 +223,7 @@ filtered.to_csv("outputs/compustat_final.csv", index = False)
 
 ## Analysis <a name="analysis"></a>
 For the full analysis please check out our dashboard [here](https://jerseyk-final-project-sunset-website-welcome-eoomf2.streamlit.app/).
-
+The python packaged used were: `pandas`, `numpy`, `ploty.express`, `altair`, and `streamlit`. 
 
 ## Conclusion <a name="conclu"></a>
 Our final results include 88 companies. We dropped companies in real estate, utilities and energy sectors because of the lack of data from the 2019 and 2022 financial reports. This could be a possible limitation for our analysis, however, we feel that the sample size is still strong enough to be used as a representation of how the supply chain was impacted by the COVID-19 pandemic.
